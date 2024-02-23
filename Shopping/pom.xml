@@ -42,6 +42,7 @@
             </configuration>
         </plugin>
     </plugins>
+        <finalName>test-docker</finalName>
     </build>
 
 

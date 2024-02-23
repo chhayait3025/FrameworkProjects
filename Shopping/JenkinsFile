@@ -1,0 +1,20 @@
+pipeline {
+    agent any
+    environment{
+         PATH = /Users/chhayasingh/apache-maven-3.9.6/bin:$PATH
+    }
+
+    stages {
+        stage('git clone') {
+            steps {
+                git branch: 'main', url: 'git@github.com:chhayait3025/FrameworkProjects.git'
+            }
+        }
+        stage('Build') {
+            steps {
+                sh "mvn clean install"
+            }
+        }
+
+        }
+    }
